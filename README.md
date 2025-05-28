@@ -1,16 +1,28 @@
-# MyERC20Token
+## 🚀 MyERC20Token – Minimal ERC20 token using OpenZeppelin
 
-Un exemple de token ERC20 codé en Solidity avec OpenZeppelin.
+This project demonstrates how to create an ERC20 token in Solidity using the OpenZeppelin library.
 
-## 🔧 Fonctionnement
-- Nom du token : `MyToken`
-- Symbole : `MTK`
-- Offre initiale : 1000 tokens (18 décimales)
+### 📦 Token Parameters
+- **Name**: MyToken
+- **Symbol**: MTK
+- **Decimals**: 18
+- **Initial supply**: 1000 MTK minted to the deployer
 
-## 🧪 Tester le contrat
-- Compiler avec Remix (`^0.8.20`)
-- Déployer avec JavaScript VM
-- Tester : `totalSupply`, `balanceOf`, `transfer`
+### 🔧 How to Deploy & Test
+1. Open [Remix](https://remix.ethereum.org/)
+2. Compile using Solidity version ^0.8.20
+3. Deploy `MyToken.sol` to JavaScript VM
+4. Call `totalSupply()`, `balanceOf(address)`, `transfer(to, amount)` to test
 
-## 🔗 Ressources
-- [OpenZeppelin ERC20](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20)
+### 🧠 Educational Value
+This repo is part of my Solidity learning journey. It shows:
+- How to create a basic ERC20 token
+- How to use OpenZeppelin contracts
+- How to initialize supply with decimals
+
+---
+
+## ✅ Next Steps (optional)
+- Add a test with Hardhat
+- Add a function to burn tokens
+- Deploy to a testnet (Goerli, Sepolia)
