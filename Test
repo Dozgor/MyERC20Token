@@ -11,4 +11,20 @@ describe("MyERC", function () {
     const balance = await token.balanceOf(owner.address);
     expect(balance).to.be.gt(0);
   });
+
+  it("Should allow the owner to burn tokens", async function () {
+    const [owner] = await ethers.getSigners();
+    const Token = await ethers.getContractFactory("MyERC");
+    const token = await Token.deploy();
+    await token.deployed();
+
+    const initialBalance = await token.balanceOf(owner.address);
+    const burnAmount = ethers.utils.parseUnits("100", 18); // 100 tokens
+
+    await token.burn(burnAmount);
+
+    const finalBalance = await token.balanceOf(owner.address);
+    expect(finalBalance).to.equal(initialBalance.sub(burnAmount));
+  });
+
 });
