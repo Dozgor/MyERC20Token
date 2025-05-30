@@ -38,15 +38,14 @@ This project includes tests written with Hardhat and Chai covering:
 
 ```bash
 npx hardhat test
+
 ✅ Expected output:
-text
-Copier
-Modifier
 MyToken
   ✔ Should deploy and mint tokens
   ✔ Should allow the owner to burn tokens
 
 11 passing
+
 🧠 Educational Value
 This repo is part of my Solidity learning journey. It shows:
 
