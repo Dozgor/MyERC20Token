@@ -38,5 +38,23 @@ This repo is part of my Solidity learning journey. It shows:
 - How to use OpenZeppelin contracts
 - How to initialize supply with decimals
 
+✅ Hardhat Test Suite
+This project includes a Hardhat test suite covering:
+
+✅ Deployment and initial minting of 1000 MTK tokens to the deployer
+
+✅ Custom burn(uint256 amount) function tested
+
+✅ Assertion of token balance changes using Hardhat and Chai
+
+✅ OpenZeppelin’s ERC20 contract imported and compiled successfully
+
+To run the tests:
+
+npx hardhat test
+Expected output: 11 passing (including both deployment and burn tests)
+
+
+
 ---
 
