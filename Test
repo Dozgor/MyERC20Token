@@ -17,11 +17,14 @@ describe("MyToken", function () {
     const token = await Token.deploy();
 
     const initialBalance = await token.balanceOf(owner.address);
+    const initialSupply = await token.totalSupply();
     const burnAmount = BigInt("100000000000000000000"); // 100 tokens
 
     await token.burn(burnAmount);
 
     const finalBalance = await token.balanceOf(owner.address);
+    const finalSupply = await token.totalSupply();
     expect(finalBalance).to.equal(initialBalance - burnAmount);
+    expect(finalSupply).to.equal(initialSupply.sub(burnAmount));
   });
 });
