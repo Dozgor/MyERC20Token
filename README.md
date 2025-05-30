@@ -47,7 +47,8 @@ MyToken
 11 passing
 ```
 
-🧠 Educational Value
+## 🧠 Educational Value
+
 This repo is part of my Solidity learning journey. It shows:
 
 How to create a basic ERC20 token
