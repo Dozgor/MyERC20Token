@@ -14,6 +14,24 @@ This project demonstrates how to create an ERC20 token in Solidity using the Ope
 3. Deploy `MyToken.sol` to JavaScript VM
 4. Call `totalSupply()`, `balanceOf(address)`, `transfer(to, amount)` to test
 
+🧪 Hardhat Tests
+
+This project includes tests written with Hardhat and Chai.
+
+Test coverage:
+- ✅ Deployment and initial minting to the deployer
+- ✅ Token burning by the owner, reducing both balance and total supply
+
+To run the tests:
+
+    npx hardhat test
+
+Expected output:
+
+    MyToken
+      ✔ Should deploy and mint tokens
+      ✔ Should allow the owner to burn tokens
+
 ### 🧠 Educational Value
 This repo is part of my Solidity learning journey. It shows:
 - How to create a basic ERC20 token
@@ -22,7 +40,3 @@ This repo is part of my Solidity learning journey. It shows:
 
 ---
 
-## ✅ Next Steps (optional)
-- Add a test with Hardhat
-- Add a function to burn tokens
-- Deploy to a testnet (Goerli, Sepolia)
