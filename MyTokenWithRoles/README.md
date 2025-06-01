@@ -13,7 +13,6 @@ Allows the owner to destroy their own tokens, reducing totalSupply.
 
 ```solidity
 function burn(uint256 amount) public onlyOwner
----
 
 ## 🔐 Permissions
 
