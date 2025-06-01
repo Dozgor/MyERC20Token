@@ -8,29 +8,26 @@ This smart contract demonstrates:
 - Optional burn functionality for any token holder
 - Solidity ^0.8.20 compatibility with OpenZeppelin ^5.0.1
 
----
-
 ## 🔐 Permissions
 
 The contract inherits from [`Ownable`](https://docs.openzeppelin.com/contracts/5.x/api/access#Ownable), and sets the initial owner in the constructor using:
+
+---
 
 ```solidity
 constructor() ERC20("MyToken", "MTK") Ownable(msg.sender)
 Only the owner can mint new tokens:
 
-solidity
-Copier
-Modifier
 function mint(address to, uint256 amount) public onlyOwner
 Anyone can burn their own tokens:
 
-solidity
-Copier
-Modifier
 function burn(uint256 amount) public {
     require(balanceOf(msg.sender) >= amount, "Solde insuffisant pour bruler");
     _burn(msg.sender, amount);
 }
+
+---
+
 🔥 Burn Feature
 This function allows any token holder to reduce the totalSupply by burning tokens from their own balance.
 It includes a require() check to prevent over-burning.
@@ -66,4 +63,3 @@ Write unit tests with Hardhat
 🧠 Author's Note
 This project is part of the IA-assisted Solidity learning journey by Dozgor.
 
----
