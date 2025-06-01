@@ -66,8 +66,4 @@ Write unit tests with Hardhat
 🧠 Author's Note
 This project is part of the IA-assisted Solidity learning journey by Dozgor.
 
-yaml
-Copier
-Modifier
-
 ---
