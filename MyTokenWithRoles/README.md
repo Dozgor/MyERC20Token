@@ -1,6 +1,6 @@
-# MyTokenWithRoles
+### MyTokenWithRoles
 
-> ✨ A minimal ERC20 token with secure minting using `Ownable` (OpenZeppelin v5)
+## ✨ A minimal ERC20 token with secure minting using `Ownable` (OpenZeppelin v5)
 
 This smart contract demonstrates:
 - ERC20 token creation with custom name and symbol
@@ -25,14 +25,15 @@ function burn(uint256 amount) public {
     require(balanceOf(msg.sender) >= amount, "Solde insuffisant pour bruler");
     _burn(msg.sender, amount);
 }
-
+```
 ---
 
-🔥 Burn Feature
+## 🔥 Burn Feature
 This function allows any token holder to reduce the totalSupply by burning tokens from their own balance.
 It includes a require() check to prevent over-burning.
 
-🧪 Manual Testing (via Remix)
+## 🧪 Manual Testing (via Remix)
+
 Deploy the contract with JavaScript VM or local environment
 
 As the owner, call mint(to, amount) → ✅ success
@@ -41,17 +42,20 @@ Switch account, try mint() again → ❌ reverts with Ownable: caller is not the
 
 Transfer tokens to another account → use burn() → ✅ totalSupply decreases
 
-🧱 Tech Stack
+## 🧱 Tech Stack
+
 Solidity ^0.8.20
 
 OpenZeppelin Contracts ^5.0.1
 
 Remix IDE with remixd for local imports
 
-📌 Files
+## 📌 Files
+
 MyTokenWithRoles.sol
 
-✅ TODO (Next Steps)
+## ✅ TODO (Next Steps)
+
 Replace Ownable with AccessControl
 
 Add MINTER_ROLE and BURNER_ROLE
@@ -60,6 +64,7 @@ Deploy to testnet (e.g. Sepolia or Mumbai)
 
 Write unit tests with Hardhat
 
-🧠 Author's Note
+## 🧠 Author's Note
+
 This project is part of the IA-assisted Solidity learning journey by Dozgor.
 
